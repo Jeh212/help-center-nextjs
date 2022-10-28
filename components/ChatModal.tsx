@@ -12,9 +12,10 @@ import {
   NewMessageArea,
   NewMessageBox,
   ChatActionButtons,
-} from "../styles/pages/components/Modal";
+} from "../styles/pages/components/ChatModal";
 import Avatar from "./Avatar";
 import AvatarPic from "../assets/avatar.png";
+import Attendent from "../assets/attendent.png";
 import { Paperclip, PaperPlaneTilt } from "phosphor-react";
 
 interface ModalProps {
@@ -31,8 +32,8 @@ function ChatModal({ openModal, setOpenModal }: ModalProps) {
         <Chat>
           <AttendantChatSection>
             <AttendantInfo>
-              <Avatar src={AvatarPic} height={70} width={70} />
-              <strong>Jean Carlos</strong>
+              <Avatar src={Attendent} height={50} width={50} />
+              <strong>Help Center</strong>
             </AttendantInfo>
             <MessageBox>
               <time>Publicado há 1h</time>

@@ -12,16 +12,26 @@ import CoverPic from "../assets/cover.png";
 
 import Avatar from "./Avatar";
 import { useState } from "react";
-import ChatModal from "./Modal";
+import ChatModal from "./ChatModal";
+import EmailModal from "./EmailModal";
 
 function DashboardInfo() {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [openEmailModal, setOpenEmailModal] = useState<boolean>(false);
 
   function handleToOpenTheModal() {
     setIsModalOpen(true);
   }
   function handleToCloseTheModal() {
     setIsModalOpen(false);
+  }
+
+  function handleToOpenTheEmailModal() {
+    setOpenEmailModal(true);
+  }
+
+  function handleToCloseTheEmailModal() {
+    setOpenEmailModal(false);
   }
 
   return (
@@ -40,12 +50,20 @@ function DashboardInfo() {
           Atendimento Online
         </OnlineHelpButton>
 
-        <EmailHelpButton>
+        <EmailHelpButton
+          onDoubleClickCapture={handleToCloseTheEmailModal}
+          onClick={handleToOpenTheEmailModal}
+        >
           <Envelope />
           E-mail de Contato
         </EmailHelpButton>
       </BottomSide>
       <ChatModal openModal={isModalOpen} setOpenModal={handleToOpenTheModal} />
+
+      <EmailModal
+        openEmailModal={openEmailModal}
+        setOpenEmailModal={handleToOpenTheEmailModal}
+      />
     </DashBoard>
   );
 }
