@@ -11,8 +11,11 @@ export const globalStyles = globalCss({
     boxSizing: 'border-box',
   },
   body: {
-    backgroundColor: '$dark',
+    backgroundColor: '$darkModal',
     'webkit-font-smoothing': 'antialiased',
+    width: '100%',
+    height: '100%',
+
   },
   'body, input, textarea, button': {
     fontFamily: 'Roboto, Roboto Slab',

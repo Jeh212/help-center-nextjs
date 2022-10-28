@@ -1,17 +1,14 @@
 /* eslint-disable react/no-string-refs */
-import { Main } from '../styles/pages/home';
 import Login from './Login';
 
 
 
 function Home() {
 
+
+  //Posso fazer uma validação, caso o usuario ja esteja logado, rederizar a tela de dashboad
   return (
-    <Main >
-      <Login />
-    </Main>
-
+    <Login />
   )
-
 }
 export default Home

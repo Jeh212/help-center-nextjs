@@ -1,22 +1,17 @@
 /* eslint-disable react/no-string-refs */
-import { LoginContainer, Logo, SubmitButton } from '../styles/pages/login';
-import Image from 'next/future/image'
-import Avatar from '../assets/avatar.png';
+import { LoginContainer, Main, SubmitButton } from '../styles/pages/login';
 import { LoginForm } from '../components/LoginForm';
 import Link from "next/link";
+import AvatarPic from '../assets/avatar.png';
+import Avatar from '../components/Avatar';
 
 
 function Login() {
 
   return (
-    <>
+    <Main>
       <LoginContainer>
-
-        <Logo>
-          <Image src={Avatar} width={250} height={250} alt="" />
-        </Logo>
-
-
+        <Avatar src={AvatarPic} height={250} width={250} />
         <LoginForm />
         <Link href="#">
           <a> Esqueceu a senha ?</a>
@@ -28,14 +23,11 @@ function Login() {
 
 
       </LoginContainer>
-    </>
+    </Main>
 
   )
-
-
-
-
-
-
 }
+
+
+
 export default Login

@@ -1,27 +1,6 @@
 import { styled } from "..";
 
 
-export const Logo = styled('div', {
-    display: 'flex',
-    flexShrink: 0,
-    borderRadius: 8,
-    alignItems: 'center',
-    justifySelf: ' center',
-
-    border: '3px solid',
-    borderColor: '$green',
-    marginBottom: '2rem',
-
-    maxWidth: 100,
-    maxHeight: 100,
-
-    img: {
-        border: '3px solid',
-        borderRadius: 8,
-        width: '100%',
-        height: '100%',
-    }
-})
 
 export const LoginContainer = styled('div', {
 
@@ -90,3 +69,12 @@ export const SubmitButton = styled('button', {
 
 })
 
+export const Main = styled('main', {
+
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100vh',
+    margin: ' 0 auto',
+
+});

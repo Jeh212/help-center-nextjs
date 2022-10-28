@@ -2,12 +2,14 @@ import { CheckBox, EmailInput, Form, PasswordInput } from "../styles/pages/compo
 import { Envelope, Lock } from 'phosphor-react';
 
 
+// interface FormProps {
+//     email: string;
+//     password: string
+//     checked: boolean;
+// }
 
 
-
-export function LoginForm() {
-
-
+export function LoginForm(/*{ email, password, checked }: FormProps*/) {
 
     return (
         <>
@@ -34,18 +36,3 @@ export function LoginForm() {
 
 }
 
-
-
-{/* <button type="submit">Entrar</button> */ }
-
-{/* <CheckBox>
-          <label>Manter Senha por 30 dias</label>
-          <input type="checkbox" />
-        </CheckBox>
-
-
-        <Link href="#">
-          <a> Esqueceu a senha ?</a>
-        </Link>
-
- */}
